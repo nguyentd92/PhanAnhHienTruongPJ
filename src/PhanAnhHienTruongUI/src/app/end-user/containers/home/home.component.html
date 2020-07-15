@@ -1,0 +1,76 @@
+<header>
+  <h1 class="app-header">Cổng góp ý Codegym</h1>
+</header>
+
+<section class="post-form">
+  <textarea placeholder="Vui lập nhập nội dung góp ý của bạn" name="" id="" cols="30" rows="10"></textarea>
+
+  <div class="post-form__location">
+    <input type="text" placeholder="Địa điểm diễn ra" />
+  </div>
+
+  <div class="post-form__bottom">
+    <div class="post-form__upload">
+      <span class="post-form__btn-upload">
+        <i class="far fa-image"></i>
+        Hình ảnh
+      </span>
+      <span class="post-form__btn-upload">
+        <i class="far fa-file-archive"></i>
+        File
+      </span>
+      <span class="post-form__btn-upload">
+        <i class="fas fa-video"></i>
+        Video
+      </span>
+    </div>
+
+    <div class="post-form__submit">
+      <button (click)="submitPost()">Gửi</button>
+    </div>
+  </div>
+</section>
+
+<section class="actions">
+  <h4 class="actions__title">Danh sách góp ý - phản ảnh</h4>
+
+  <div class="actions__wrapper">
+    <span (click)="isFilterExpand = !isFilterExpand"
+      ><i class="fas fa-search"></i>Tìm kiếm</span
+    >
+    <span><i class="fas fa-sort-amount-down"></i>Sắp xếp theo</span>
+    <span><i class="fas fa-th actions__notext"></i></span>
+    <span><i class="fas fa-list actions__notext"></i></span>
+  </div>
+</section>
+
+<section class="filter-container" *ngIf="isFilterExpand">
+  <form [formGroup]="" class="filter">
+    <div class="filter__combox">
+      <input type="text" />
+    </div>
+    <div class="filter__combox">
+      <select>
+        <option value="">Tất cả lĩnh vực</option>
+      </select>
+    </div>
+    <div class="filter__combox">
+      <select>
+        <option value="">Tất cả lĩnh vực</option>
+      </select>
+    </div>
+    <div class="filter__combox">
+      <select>
+        <option value="">Tất cả lĩnh vực</option>
+      </select>
+    </div>
+  </form>
+
+  <div class="submit">
+    <button>Submit</button>
+  </div>
+</section>
+
+<div class="posts" [ngClass]="{ column: isColumn }">
+  <app-post-item *ngFor="let item of [].constructor(12)"></app-post-item>
+</div>

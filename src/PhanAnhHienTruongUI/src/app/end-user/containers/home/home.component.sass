@@ -1,0 +1,97 @@
+.app-header
+    text-transform: uppercase
+    font-size: 2rem
+    font-weight: 600
+
+    
+    
+.post-form
+    margin-bottom: 1rem
+    border: 1px solid #d2d2d2
+    border-radius: .1rem
+
+    textarea
+        width: 100%
+        padding: .5rem
+        background-color: #f2f2f2
+        border: none
+        outline: none
+
+    &__location
+        padding: .5rem
+
+        input
+            border: none
+            outline: none
+            width: 100%
+
+    &__bottom
+        display: flex
+        justify-content: space-between
+        background-color: #f2f2f2
+        padding: .5rem
+
+    &__upload
+        font-size: .8rem
+    
+    &__btn-upload
+        margin-right: 1rem
+    
+    
+.actions
+    display: flex
+    justify-content: space-between
+    margin-bottom: 1rem
+
+    &__title
+        font-size: 1.2rem
+        font-weight: 500
+        text-transform: uppercase
+        margin: 0
+
+    &__wrapper
+        display: flex
+        align-items: center
+
+        span
+            display: block
+            margin-left: .5rem
+            font-size: .9rem
+            
+            i
+                font-size: .9rem
+                margin-right: .3rem
+
+    &__notext
+        font-size: 1.2rem !important
+    
+.posts
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 1.6rem
+
+    &.column
+        display: flex
+        flex-direction: column
+.filter-container
+    display: flex
+    justify-content: space-between
+    padding: .5rem
+    background-color: #d2d2d2
+    margin-bottom: 1rem
+
+.filter
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 1rem
+    flex-grow: 1
+
+    .filter__combox
+        *
+            width: 100%
+
+.submit
+    margin-left: 1rem
+    width: 100px
+    align-self: flex-end
+    
